@@ -55,7 +55,7 @@ const Menu = ({
                 >
                     {
                         // eslint-disable-next-line
-                        resources.filter(r => r.options && r.options.hasOwnProperty('menuParent') && r.options.menuParent == parentResource.name)
+                        resources.filter(r => r.options && r.options.hasOwnProperty('menuParent') && r.options.menuParent == parentResource.name && r.hasList)
                             .map(childResource => (
                                 <MenuItemLink
                                     key={childResource.name}
